@@ -1,4 +1,6 @@
 Teashop::Application.routes.draw do
+  resources :products
+
   resources :catalogues
 
   # The priority is based upon order of creation:

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121117103800) do
+ActiveRecord::Schema.define(:version => 20121117104227) do
 
   create_table "catalogues", :force => true do |t|
     t.string   "title"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(:version => 20121117103800) do
     t.decimal  "price"
     t.string   "image_url"
     t.string   "category"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "products", :force => true do |t|
+    t.string   "itemname"
+    t.text     "description"
+    t.string   "size"
+    t.decimal  "teaid"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
